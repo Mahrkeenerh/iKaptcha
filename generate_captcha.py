@@ -11,7 +11,6 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 OUTPUT_DIR = Path("generated_samples")
-OUTPUT_DIR.mkdir(exist_ok=True)
 
 WIDTH, HEIGHT = 400, 76
 CHARSET = "abcdefghjklmnpqrstuvwxy23457"  # 28 chars matching real captchas
@@ -427,6 +426,7 @@ def generate_captcha(label: str | None = None) -> tuple[Image.Image, str]:
 
 
 if __name__ == "__main__":
+    OUTPUT_DIR.mkdir(exist_ok=True)
     for i in range(9):
         img, label = generate_captcha()
         path = OUTPUT_DIR / f"gen_{i+1}_{label}.png"

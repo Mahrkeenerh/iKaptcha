@@ -10,6 +10,9 @@ venv/
 # (990 MB; not committed to keep the LFS footprint reasonable)
 dataset_synthetic/
 
+# Demo output of `python generate_captcha.py`
+generated_samples/
+
 # Editor / OS
 .vscode/
 .idea/
