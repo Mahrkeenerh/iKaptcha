@@ -1,0 +1,29 @@
+[project]
+name = "ikacaptcha"
+version = "1.0.0"
+description = "CRNN that solves the Ikariam pirate fortress captcha"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    # Inference (minimum to run predict_onnx.py)
+    "onnxruntime>=1.20",
+    "pillow>=10.0",
+    "numpy>=1.26",
+    # Training + PyTorch inference
+    "torch>=2.4",
+    "torchvision>=0.19",
+    # ONNX export
+    "onnx>=1.17",
+    "onnxscript>=0.1",
+    # Synthetic data generation
+    # (Pillow already listed above)
+    # Real data fetching
+    "requests>=2.31",
+]
+
+[tool.uv]
+# This project uses uv (https://docs.astral.sh/uv/) for environment management.
+# Quick start:
+#   uv venv
+#   uv pip install -e .

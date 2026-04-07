@@ -135,7 +135,7 @@ class AllSamplesDataset(Dataset):
         self.samples = []  # (img_path, label, sample_id)
 
         # Load YOLO dataset (train + val)
-        combined = Path("dataset_combined")
+        combined = Path("dataset_pseudo_v2")
         for split in ["train", "val"]:
             img_dir = combined / "images" / split
             lbl_dir = combined / "text_labels" / split

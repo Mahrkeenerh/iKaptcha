@@ -47,7 +47,7 @@ PHASE_CONFIG = {
 }
 
 # Dataset paths
-COMBINED_DIR = os.environ.get("DATASET_DIR", "dataset_combined")
+COMBINED_DIR = os.environ.get("DATASET_DIR", "dataset_pseudo_v2")
 SYNTHETIC_TRAIN = "dataset_synthetic/train"
 SYNTHETIC_VAL = "dataset_synthetic/val"
 REAL_TRAIN_IMG = os.path.join(COMBINED_DIR, "images/train")
@@ -515,7 +515,7 @@ def main():
         elif phase == "mixed":
             run_mixed(model, config, train_tf, val_tf)
 
-    print("\nDone! Best models: best_pretrain.pth, best_mixed.pth, best_swa.pth")
+    print("\nDone! Production model saved as final_mixed.pth")
 
 
 if __name__ == "__main__":

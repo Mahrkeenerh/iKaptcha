@@ -7,7 +7,7 @@ along the greedily decoded path.  This gives a per-character confidence whose me
 represents how certain the model is about the full sequence.
 
 Usage:
-    python pseudo_label.py [--checkpoint best_mixed.pth] [--batch-size 64]
+    python pseudo_label.py [--checkpoint final_mixed.pth] [--batch-size 64]
 """
 
 import argparse
@@ -143,8 +143,8 @@ def load_batch(paths, transform):
 
 def main():
     parser = argparse.ArgumentParser(description="Pseudo-label real captcha images")
-    parser.add_argument("--checkpoint", default="best_mixed.pth",
-                        help="Model checkpoint to load (default: best_mixed.pth)")
+    parser.add_argument("--checkpoint", default="final_mixed.pth",
+                        help="Model checkpoint to load (default: final_mixed.pth)")
     parser.add_argument("--batch-size", type=int, default=64,
                         help="Inference batch size (default: 64)")
     parser.add_argument("--output", default="pseudo_labels.csv",

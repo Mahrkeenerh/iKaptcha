@@ -92,10 +92,6 @@ See `FINDINGS.md` for full details.
 | test8.png | dtmbpw |
 | test9.png | 7dxesdjv |
 
-## Reviewed Sample Corrections
-- `j6pj3f_0041.png` → label `jgpj3f` (6 was actually g)
-- `qw7b9m_0032.png` → excluded (ambiguous char)
-
 ## Package Management
 - Use `uv` for Python, not `pip`
 - Use `uv venv` for virtual environments
